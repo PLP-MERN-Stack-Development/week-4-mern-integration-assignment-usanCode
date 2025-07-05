@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.post("/", protect, createTask);
-router.post("/me", protect, getMyTask);
+router.post("/me", protect, getMyTasks);
 router.post("/all", protect, authorize(["admin"]), getAllTasks);
 
 module.exports = router;
